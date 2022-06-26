@@ -52,29 +52,39 @@ let num =4; //the 4 consecutive number is given
 
 /* to find the largest num which is made by adding 4 consecutive number */
 
-
 function largestConNum(array,num)
 {
     if(num>array.length)
     {
-        return false;
+        throw new error("Not found")
     }
 
-    else
-    {    let max=0;
-                for(let i=0;i<array.length-num+1;i++)
+    else{
+
+  let max=0;
+        for(let i=0;i<array.length-num+1;i++)
         {
-         
-             let temp=0;
+            let temp=0;
             for(let j=0;j<num;j++)
             {
-                temp +=array[i+j]
-
+                 temp+= array[i+j]
             }
-            return temp
-            
+            if(temp>max)
+            {
+                max=temp;
+
+                
+            }
+
+
         }
+       return max 
     }
 }
+
+
+
+
+
 
 console.log(largestConNum(array,num))
