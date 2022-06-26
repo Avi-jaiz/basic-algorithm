@@ -15,35 +15,66 @@ let array =[1,2,3,4,3,5,4,6,7,8]  //total 10 elements
 let num =4; //the 4 consecutive number is given
 
 
-const largestConNum =(array,num)=>
-{
-   if(num>array.length)       //num should not be greater than array length .
-   {
-    throw new error ("Num should not be greater than array")
-   }
+// const largestConNum =(array,num)=>
+// {
+//    if(num>array.length)       //num should not be greater than array length .
+//    {
+//     throw new error ("Num should not be greater than array")
+//    }
 
-   else{
-          let max=0
-    for(let i=0;i<array.length-num+1;i++)      //here for loop must run wrt num and it should not exit the pair keep the length
-    {
-        let temp=0;                       
-        for(let j=0;j<num;j++)                //here j must run upto the length satisfying the 'num' consecutive nos
-        {
+//    else{
+//           let max=0
+//     for(let i=0;i<array.length-num+1;i++)      //here for loop must run wrt num and it should not exit the pair keep the length
+//     {
+//         let temp=0;                       
+//         for(let j=0;j<num;j++)                //here j must run upto the length satisfying the 'num' consecutive nos
+//         {
             
-            temp += array[i+j]
-        }
+//             temp += array[i+j]
+//         }
 
-        if(temp>max)
-        {
-            max=temp
-        }
+//         if(temp>max)
+//         {
+//             max=temp
+//         }
         
+//     }
+
+// return max
+
+//    }
+
+// }
+
+
+
+
+
+/* to find the largest num which is made by adding 4 consecutive number */
+
+
+function largestConNum(array,num)
+{
+    if(num>array.length)
+    {
+        return false;
     }
 
-return max
+    else
+    {    let max=0;
+                for(let i=0;i<array.length-num+1;i++)
+        {
+         
+             let temp=0;
+            for(let j=0;j<num;j++)
+            {
+                temp +=array[i+j]
 
-   }
-
+            }
+            return temp
+            
+        }
+    }
 }
 
 console.log(largestConNum(array,num))

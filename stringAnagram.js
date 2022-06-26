@@ -11,39 +11,38 @@ Satify two conditions to know a string is anagram or not
 
 */
 
+
 function isAnagram(str1,str2)
 {
     if(str1.length!==str2.length)
     {
-        return `The given ${str1} and ${str2} is not a anagram`
+        false;
     }
 
-let counter={}
-    for (let letter of str1)
+    else
     {
-      counter[letter] =(counter[letter]||0)+1;   
-      
-    }
-console.log(counter)
+        let counter={}
+        for(let letter of str1)
+        {
+            counter[letter] = (counter[letter] ||0)+1
+        }
+        console.log(counter)
+        for(let item of str2)
+        {
+            if(!counter[item])
+            {
+                return false;
+            }
+            else
+            {
+                counter[item] -=1
+            }
+        }
+        console.log(counter)
 
-for(let items of str2)
-{
-    if(!counter[items])
-    {
-        return false
+        return 'Anagram'
     }
-    else{
-        counter[items] -=1
-    }
-    return "Anagram"
-    
 }
 
-}
-
-const ans = isAnagram("Helloabcde","ollehabcde")
+const ans = isAnagram("hello","olleh")
 console.log(ans)
-
-
-
-
