@@ -31,3 +31,4 @@ function binarySearch(array,number)
 }
 
 console.log(binarySearch(array,number))
+
