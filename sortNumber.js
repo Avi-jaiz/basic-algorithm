@@ -1,30 +1,60 @@
-let array = [9,8,7,6,5,4,3,2,1]
+// let array = [9,8,7,6,5,4,3,2,1]
 
-function sortarr(array)
-{
-    for(let i=0;i<array.length-1;i++)
-    {
-        let sortedArr=[]
-        for(let j=i+1;j<array.length;j++)
-        {
-            let temp=[]
-            if(array[i]>array[j])
-            {
-                temp = array[j];
-                array[j]=array[i];
-                array[i]=temp;
+// function sortedNum(array)
+// {
+//    let left=0;
+//    let right=array.length-1;
 
-                
-            }
+//   for(let i=0;i<array.length;i++) 
 
-           
+//   {
+//           for(let j=1;j<array.length;j++)
+//           {
+
+//             let sortedNu =[];
+//             let temp=0;
+//             if(array[left]>array[right])
+//             {
+//                   temp = array[right];
+//                   array[right]=array[left];
+//                   array[left]=temp;
+//             }
+ 
+//             sortedNu+=[array]
+ 
+//             return sortedNu
+//     }
+
+
+//           }
+//   }
           
-return temp;
-        
-           
-        }
 
-    
-    }
+
+
+// console.log(sortedNum(array))
+
+
+let array = [9,8,7,6,5,4,3,2,1];
+
+function sorttheNum(array)
+{
+      let left=0;
+      let right=left+1;
+let sortedArray=[]
+  while (left<right)
+  {
+      let temp=0;
+      
+      if(array[left]>array[right])
+      {
+             temp=right;
+             right=left;
+             left=temp;
+      }
+  }
+
+  return sortedArray+=array[left]
 }
-console.log(sortarr(array))
+
+console.log(sorttheNum(array))

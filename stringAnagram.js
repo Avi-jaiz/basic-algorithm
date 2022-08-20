@@ -12,37 +12,77 @@ Satify two conditions to know a string is anagram or not
 */
 
 
-function isAnagram(str1,str2)
-{
-    if(str1.length!==str2.length)
-    {
-        false;
-    }
+// function isAnagram(str1,str2)
+// {
+//     if(str1.length!==str2.length)
+//     {
+//         false;
+//     }
 
-    else
-    {
-        let counter={}
-        for(let letter of str1)
-        {
-            counter[letter] = (counter[letter] ||0)+1
-        }
-        console.log(counter)
-        for(let item of str2)
-        {
-            if(!counter[item])
-            {
-                return false;
-            }
-            else
-            {
-                counter[item] -=1
-            }
-        }
-        console.log(counter)
+//     else
+//     {
+//         let counter={}
+//         for(let letter of str1)
+//         {
+//             counter[letter] = (counter[letter] ||0)+1
+//         }
+//         console.log(counter)
+//         for(let item of str2)
+//         {
+//             if(!counter[item])
+//             {
+//                 return false;
+//             }
+//             else
+//             {
+//                 counter[item] -=1
+//             }
+//         }
+//         console.log(counter)
 
-        return 'Anagram'
-    }
-}
+//         return 'Anagram'
+//     }
+// }
 
-const ans = isAnagram("hello","olleh")
-console.log(ans)
+// const ans = isAnagram("hello","olleh")
+// console.log(ans)
+
+
+// function isAnagram(str1,str2)
+// {
+//     if(str1.length!==str2.length)
+//     {
+//         return false;
+//     }
+//     else 
+//     {
+//         let counter={};
+//         for(let letter of str1)
+//         {
+//            counter[letter] = (counter[letter]||0) +1
+           
+//         }
+
+//         for(let item of str2)
+//         {
+//             if(!counter[item])
+//             {
+//                 return false
+//             }
+
+//             else 
+//             {
+//                 counter[item] -=1;
+                
+//             }
+
+            
+//         }
+
+//         return `Its a Anagram`
+
+//     }
+// }
+
+// console.log(isAnagram('hello','olelh'))
+

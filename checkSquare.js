@@ -21,6 +21,7 @@ function squareCheck(array1,array2)  /* This programs gives the time complexity 
                }
                if(j===array2.length-1)
                {
+                
                 if(!isSquare)
                 {
                     return false

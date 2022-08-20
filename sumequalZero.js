@@ -50,33 +50,59 @@
 // console.log(ans)
 
 
-let array=[-3,-2,-1,0,1,2,3,4]
-function isSumPair(array)
-{
-    let leftIndex=0;
-    let rightIndex=array.length-1;
+// let array=[-3,-2,-1,0,1,2,3,4]
+// function isSumPair(array)
+// {
+//     let leftIndex=0;
+//     let rightIndex=array.length-1;
 
-    while(leftIndex<rightIndex)
-    {
-        let sum= array[rightIndex]+array[leftIndex]
-        if(sum===0)
-        {
-            return [array[leftIndex],array[rightIndex]]
-        }
+//     while(leftIndex<rightIndex)
+//     {
+//         let sum= array[rightIndex]+array[leftIndex]
+//         if(sum===0)
+//         {
+//             return [array[leftIndex],array[rightIndex]]
+//         }
 
-        else if(sum<0)
-        {
-            leftIndex++
-        }
-        else if(sum>0)
-        {
-            rightIndex--
-        }
-    }
+//         else if(sum<0)
+//         {
+//             leftIndex++
+//         }
+//         else if(sum>0)
+//         {
+//             rightIndex--
+//         }
+//     }
 
 
-}
+// }
 
-console.log(isSumPair(array))
+
+// function isTarget(array,target)
+// {
+//     let leftIndex=0;
+//     let rightIndex=array.length-1;
+
+//     while(leftIndex<rightIndex)
+
+//     {   
+//         let sum=array[leftIndex]+array[rightIndex]
+//         if(sum<target)
+//         {
+//             leftIndex++
+//         }
+//         else if(sum>target)
+//         {
+//             rightIndex--
+//         }
+// else if(sum===target)
+// {
+//     return [array[leftIndex],array[rightIndex]]
+// }
+
+//     }
+// }
+
+// console.log(isTarget([1,2,3,4,5,6],3))
 
 

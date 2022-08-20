@@ -5,11 +5,13 @@ function paragraphCount(paragraph)
     const regex= /[\.?!]/g;
     paragraph = paragraph.replace(regex,'<>')
 
-    return paragraph.split('<>').length-1
+    return paragraph.split('<>').length+1
 
 }
 
 
-paragraph =   "Hello.hello!hellohi"
+paragraph =   "hello avi jaiswal"
 
 console.log(paragraphCount(paragraph))
+
+

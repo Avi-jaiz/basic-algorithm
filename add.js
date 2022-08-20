@@ -9,4 +9,16 @@
 // console.log(arr)
 
 
+// function makeHex(array)
+// {
+//     let hex ='#';
+
+//     for(let i=0;i<6;i++)
+//     {
+//         hex=hex+(array[Math.floor(Math.random()*array.length)])
+//     }
+
+//     return hex;
+// }
+// console.log(makeHex(["A","B","C","D","E","F",1,2,3,4,5,6,7]))
 
